@@ -1,0 +1,1 @@
+There should be one test directory for each packer template to fully test an EC2 build instance before it registered as an AMI.  Running the tests sould be the past packer step.

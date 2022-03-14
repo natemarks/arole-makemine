@@ -1,0 +1,17 @@
+ansible==4.10.0
+#ansible
+awscli==1.19.19
+#boto==2.49.0
+#boto3==1.17.19
+#botocore==1.20.19
+boto
+boto3
+botocore
+#molecule==3.4.0
+#molecule-docker==1.1.0
+#molecule-ec2==0.4
+molecule
+molecule-docker
+molecule-ec2
+yamllint
+ansible-lint

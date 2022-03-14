@@ -1,0 +1,6 @@
+---
+# file: webservers.yml
+- hosts: localhost
+  become: false
+  roles:
+    - /opt/ansible/makemine

@@ -1,0 +1,1 @@
+This directory contains all of the tests run oon the temporary EC2 build instance before it's registered as an AMI. The packer script runs the run_tests.sh script.

@@ -1,0 +1,19 @@
+---
+- name: Download makemine tarball
+  get_url:
+    url: https://github.com/natemarks/makemine/releases/download/v{{ version }}/makemine_{{ version }}_linux_amd64.tar.gz
+    dest: ~/makemine_{{ version }}_linux_amd64.tar.gz
+    checksum: sha1:{{ sha256 }}
+    mode: '0644'
+
+- name: Extract /tmp/makemine_{{ version }}_linux_amd64.tar.gz in /tmp
+  ansible.builtin.unarchive:
+    src: "{{ ansible_env.HOME }}/makemine_{{ version }}_linux_amd64.tar.gz"
+    dest: "{{ ansible_env.HOME }}"
+
+- name: Copy makemine to /usr/local/bin
+  become: yes
+  ansible.builtin.copy:
+    src: "{{ ansible_env.HOME }}/makemine"
+    dest: /usr/local/bin/makemine
+    mode: '0755'

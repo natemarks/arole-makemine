@@ -1,0 +1,3 @@
+This is the home shell scripts executed on the build  instance by the packer shell provisioner. The wholle scripts directory is uploaded to /tmp.
+
+Every packer template runs a test/[IMAGE_NAME]/run_tests.sh which runs pytest-testinfra checks on the ec2 build instance. They can't be run on the loca dev machine so they're excluded from the project make static_checks  targte which **DOES** run pytests in the python directory

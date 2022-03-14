@@ -1,0 +1,1 @@
+Keep files/folders that should be  uploaded directly in the files folder
