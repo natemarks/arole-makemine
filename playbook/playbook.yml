@@ -3,4 +3,4 @@
 - hosts: localhost
   become: false
   roles:
-    - /opt/ansible/makemine
+    - role: $ROLE_DIR
